@@ -1,0 +1,80 @@
+body {
+  background: #527578; }
+
+#header {
+  background: #47423f;
+  color: white;
+  margin-bottom: 5px;
+  border: 1px #222 solid; }
+  @media only screen and (min-width: 960px) {
+    #header {
+      margin: auto;
+      border: 1px solid #47423f;
+      width: 959px; } }
+  #header .nav-bar {
+    padding: 2px 10px; }
+    #header .nav-bar h1 {
+      float: left;
+      width: 50%; }
+    #header .nav-bar button {
+      line-height: 40px;
+      margin: 21px 0;
+      height: 40px;
+      float: right;
+      color: #FFF;
+      border: 1px white solid;
+      background: none; }
+
+#content {
+  background: #a4b7af;
+  color: #47423f;
+  margin: 20px 20% 20px 20%; }
+  @media only screen and (min-width: 960px) {
+    #content {
+      margin: auto;
+      border: 1px solid white;
+      width: 959px; } }
+  #content div.page {
+    padding: 10px; }
+    #content div.page h1, #content div.page h2 {
+      margin: 0; }
+    #content div.page #bbc-news {
+      width: 46%;
+      padding: 2%;
+      float: left; }
+    #content div.page #sky-news {
+      width: 46%;
+      padding: 2%;
+      float: right; }
+
+div.news-item {
+  color: #47423f;
+  background: white;
+  border: 1px solid white;
+  margin-bottom: 10px; }
+  div.news-item h3 {
+    margin: 0px 3%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px; }
+    div.news-item h3 a {
+      text-decoration: none;
+      color: #D74B4B; }
+  div.news-item div.image {
+    float: left;
+    margin-left: 3%;
+    width: 17%; }
+  div.news-item div.content {
+    width: 80%;
+    float: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+    div.news-item div.content p {
+      text-indent: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    div.news-item div.content span {
+      float: right; }

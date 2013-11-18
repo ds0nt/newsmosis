@@ -1,0 +1,129 @@
+    	
+$blue-tone: #527578;
+$blue: #A4B7AF;
+$blue-tone-primary: #ADA692;
+$blue-primary: #47423F;
+$darkest: #47423F;
+$darkest-primary: #FFFFFF;
+
+$phone-tiny-max: 229px;
+$phone-sm-max: 480px;
+$phone-lg-max: 767px;
+$tablet-max: 959px;
+
+@mixin respond-to($media) {
+  @if $media == tiny {
+    @media only screen and (max-width: $phone-tiny-max) { @content; }
+  }
+  @else if $media == small {
+    @media only screen and (min-width: $phone-tiny-max + 1) and (max-width: $phone-sm-max) { @content; }
+  }
+  @else if $media == medium {
+    @media only screen and (min-width: $phone-sm-max + 1) and (max-width: $phone-lg-max) { @content; }
+  }
+  @else if $media == tablet {
+    @media only screen and (min-width: $phone-lg-max + 1) and (max-width: $tablet-max) { @content; }
+  }
+  @else if $media == pc {
+    @media only screen and (min-width: $tablet-max + 1) { @content; }
+  }
+}
+
+body {
+	background: $blue-tone;
+}
+
+#header {
+	background: $darkest;
+	color: $darkest-primary;
+	margin-bottom: 5px;
+	border: 1px #222 solid;
+	@include respond-to(pc) {
+	    margin: auto;
+	    border: 1px solid $darkest;
+	    width: 959px;
+	}
+
+	.nav-bar {
+		padding: 2px 10px;
+		h1 {
+			float: left;
+			width: 50%;
+		}
+		button {
+			line-height: 40px;
+			margin: 21px 0;
+			height: 40px;
+			float: right;
+			color: #FFF;
+			border: 1px $darkest-primary solid;
+			background: none;			
+		}
+	}
+}
+
+#content {
+	background: $blue;
+	color: $blue-primary;
+	margin: 20px 20% 20px 20%;
+	@include respond-to(pc) {
+	    margin: auto;
+	    border: 1px solid $darkest-primary;
+	    width: 959px;
+	}
+	div.page {
+		h1, h2 {
+			margin: 0;
+		}
+		padding: 10px;
+		#bbc-news {
+			width: 46%;
+			padding: 2%;
+			float:left;
+		}
+		#sky-news {
+			width: 46%;
+			padding: 2%;
+			float:right;
+		}
+	}
+}
+
+div.news-item {
+	color: $darkest;
+	background: $darkest-primary;
+	border: 1px solid $darkest-primary;
+	margin-bottom: 10px;
+	h3 {
+		a {
+			text-decoration: none;
+			color: #D74B4B;
+		}
+		margin: 0px 3%;
+		white-space: nowrap;
+  		overflow: hidden;
+		text-overflow: ellipsis;
+		margin-bottom: 5px;		
+	}	
+	div.image {
+		float: left;
+		margin-left: 3%;
+		width: 17%;
+	}
+	div.content	{
+		width: 80%;
+		float: right;
+		white-space: nowrap;
+  		overflow: hidden;
+		text-overflow: ellipsis;
+		p {
+			text-indent: 20px;
+			white-space: nowrap;
+	  		overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		span {
+			float: right;			
+		}
+	}
+}

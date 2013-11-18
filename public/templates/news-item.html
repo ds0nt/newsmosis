@@ -1,0 +1,13 @@
+{{#with article}}
+<div class="news-item" data-href="{{link}}">
+	<h3><a href="{{link}}">{{title}}</a></h3>
+	<div class="image">
+		<img src="{{image.url}}">
+	</div>
+	<div class="content">
+		<p class="description">{{description}}</p>
+		<span class="date"><small>{{dateify date}}</small></span>
+	</div>
+	<div style="clear:both"></div>
+</div>
+{{/with}}
